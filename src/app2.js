@@ -142,10 +142,22 @@ var HelloWorldLayer2 = cc.Layer.extend({
                     }
                 }, this);
         }
-       
+
+        var menuItem1 = new cc.MenuItemFont("Back", back);
+        var menu = new cc.Menu(menuItem1);
+        menu.alignItemsVerticallyWithPadding(50);
+        this.addChild(menu);
+
+
         return true;
     }
 });
+
+var back = function()
+{
+    INITIALIZED_2 = false;
+    cc.director.popScene();
+};
 /*
 var StopMusic = function()
 {

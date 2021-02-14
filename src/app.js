@@ -162,19 +162,19 @@ var play = function()
     var scene = new HelloWorldScene2();
     cc.director.pushScene(scene);
     cc.log("Play Game");
-}
+};
 var highscores = function()
 {
     cc.log("Highscores");
-}
+};
 var settings = function()
 {
     cc.log("Go To Setting");
-}
+};
 var imageFunc = function()
 {
     cc.log("Go To Setting");
-}
+};
 
 var StopMusic = function()
 {
