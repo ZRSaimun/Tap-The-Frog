@@ -1,6 +1,7 @@
 var res = {
     HelloWorld_png : "res/HelloWorld.png",
 
+    gbackground_png : "res/gamebackground.jpeg",
     frogNormal_png : "res/frog00.png",
     CloseN_png : "res/CloseN.png",
     CloseS_png : "res/CloseS.png",

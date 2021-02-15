@@ -161,7 +161,15 @@ var play = function()
 {
     var scene = new HelloWorldScene2();
     cc.director.pushScene(scene);
-    cc.log("Play Game");
+     cc.log("Play Game");
+    // Fade Transition
+    //cc.director.runScene(new cc.TransitionFade(3.0, scene));
+    // Jump and zoom Transition 
+    //cc.director.runScene(new cc.TransitionJumpZoom(3.0, scene));
+    //Zoom and Flip Transition
+    cc.director.runScene(new cc.TransitionZoomFlipY(3.0, scene));
+
+
 };
 var highscores = function()
 {

@@ -13,12 +13,28 @@ var HelloWorldLayer2 = cc.Layer.extend({
         // ask the window size
         var size = cc.winSize;
 
+        var sprite0 = new cc.Sprite.create(res.gbackground_png);
+        sprite0.setAnchorPoint(cc.p(0,0));
+        // sprite0.scaleX=Size.width/scrSize.width;
+        // sprite0.scaleY=Size.height/scrSize.height;
+        this.addChild(sprite0, 0);
+
+
         var sprite = new cc.Sprite.create(res.frogNormal_png);
         sprite.setAnchorPoint(cc.p(0.5,0.5));
         sprite.setPosition(cc.p(size.width/4, size.height /3.5));
         this.addChild(sprite, 0);
 
- 
+        var sprite2 = new cc.Sprite.create(res.frogNormal_png);
+        sprite2.setAnchorPoint(cc.p(0.5,0.5));
+        sprite2.setPosition(cc.p(size.width/1.85, size.height /3.5));
+        this.addChild(sprite2, 0);
+
+        var sprite3 = new cc.Sprite.create(res.frogNormal_png);
+        sprite3.setAnchorPoint(cc.p(0.5,0.5));
+        sprite3.setPosition(cc.p(size.width/1.2, size.height /3.5));
+        this.addChild(sprite3, 0);
+
         cc.eventManager.addListener(
             {
                 event:cc.EventListener.MOUSE,
@@ -32,20 +48,20 @@ var HelloWorldLayer2 = cc.Layer.extend({
                     cc.log ("ikeh");    
                     sprite.setVisible (false);
                     }
+                    if (n >= 500 && n <= 607 && m >= 30 && m <= 250){
+                        cc.log (n,m);    
+                        sprite2.setVisible (false);
+                        }
+                    if (n >= 800 && n <= 907 && m >= 30 && m <= 250){
+                        cc.log (n,m);    
+                         sprite3.setVisible (false);
+                         }
                 }
             }, this);
 
+       
+    
 
-
-        var sprite2 = new cc.Sprite.create(res.frogNormal_png);
-        sprite2.setAnchorPoint(cc.p(0.5,0.5));
-        sprite2.setPosition(cc.p(size.width/1.85, size.height /3.5));
-        this.addChild(sprite2, 0);
-
-        var sprite3 = new cc.Sprite.create(res.frogNormal_png);
-        sprite3.setAnchorPoint(cc.p(0.5,0.5));
-        sprite3.setPosition(cc.p(size.width/1.2, size.height /3.5));
-        this.addChild(sprite3, 0);
 
         // cc.audioEngine.playMusic(res.Main_Music, false);
 
@@ -105,11 +121,11 @@ var HelloWorldLayer2 = cc.Layer.extend({
                 
                 onMouseMove: function(event)
                 {
-                    cc.log("Mouse Moved: " + event.getLocationX());
+                    //cc.log("Mouse Moved: " + event.getLocationX());
                 },
                 onMouseScroll: function(event)
                 {
-                    cc.log("Scroll: " + event.getLocationX());
+                    //cc.log("Scroll: " + event.getLocationX());
                 }
            }, this);
        }
@@ -122,7 +138,7 @@ var HelloWorldLayer2 = cc.Layer.extend({
 
                     onKeyPressed: function(key, event)
                     {
-                        cc.log("Key Pressed: " + key.toString());
+                        //cc.log("Key Pressed: " + key.toString());
                     }
                 }, this);
         }
@@ -138,7 +154,7 @@ var HelloWorldLayer2 = cc.Layer.extend({
 
                     callback: function(accelEvent, event)
                     {
-                        cc.log('Accel X: ' + accelEvent.x + ' Y: ' + accelEvent.y + ' z: ' + accelEvent.z);
+                       // cc.log('Accel X: ' + accelEvent.x + ' Y: ' + accelEvent.y + ' z: ' + accelEvent.z);
                     }
                 }, this);
         }
@@ -146,6 +162,8 @@ var HelloWorldLayer2 = cc.Layer.extend({
         var menuItem1 = new cc.MenuItemFont("Back", back);
         var menu = new cc.Menu(menuItem1);
         menu.alignItemsVerticallyWithPadding(50);
+        menu.setAnchorPoint(cc.p(0.5,0.8));
+        menu.setPosition(cc.p(size.width/4.8, size.height /1.1));
         this.addChild(menu);
 
 
@@ -158,6 +176,7 @@ var back = function()
     INITIALIZED_2 = false;
     cc.director.popScene();
 };
+
 /*
 var StopMusic = function()
 {
