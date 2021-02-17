@@ -153,6 +153,7 @@ var HelloWorldLayer = cc.Layer.extend({
         this.addChild(menu);
 
 
+        
         return true;
     }
 });
@@ -167,7 +168,7 @@ var play = function()
     // Jump and zoom Transition 
     //cc.director.runScene(new cc.TransitionJumpZoom(3.0, scene));
     //Zoom and Flip Transition
-    cc.director.runScene(new cc.TransitionZoomFlipY(3.0, scene));
+    //cc.director.runScene(new cc.TransitionZoomFlipY(3.0, scene));
 
 
 };
