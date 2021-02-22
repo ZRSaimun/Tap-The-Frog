@@ -104,15 +104,18 @@ var HelloWorldLayer2 = cc.Layer.extend({
                     if (n >= 800 && n <= 907 && m >= 145 && m <= 218){
                         cc.log (n,m);    
                          sprite3.setVisible (false);
+                         flag = 0;
                          }
 
                      if (n >= 191 && n <= 300 && m >= 12 && m <= 86){
                         cc.log ("ikeh");    
                         sprite4.setVisible (false);
+                        flag = 0;
                     }
                     if (n >= 500 && n <= 607 && m >= 12 && m <= 86){
                         cc.log (n,m);    
                         sprite5.setVisible (false);
+                        flag = 0;
                         }
                     if (n >= 800 && n <= 907 && m >= 12 && m <= 86){
                         cc.log (n,m);    
@@ -124,6 +127,8 @@ var HelloWorldLayer2 = cc.Layer.extend({
                             flag = 0;
                              } 
                          }
+                     
+                    
                 }
             }, this);
 
