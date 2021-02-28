@@ -135,7 +135,6 @@ var HelloWorldLayer2 = cc.Layer.extend({
        
     
 
-
         // cc.audioEngine.playMusic(res.Main_Music, false);
 
         this.scheduleOnce(StopMusic, 0);
